@@ -1,0 +1,7 @@
+{
+  "@message": "GET / 200 0ms",
+  "@timestamp": "2021-01-17T20:42:04.015Z",
+  "@fields": {
+    "level": "info"
+  }
+}
