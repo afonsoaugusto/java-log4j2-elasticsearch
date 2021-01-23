@@ -47,7 +47,7 @@ curl -X POST \
     }'
 ```
 
-## Kibana
+## Example
 
 ```java
 public static void main(String[] args) {
