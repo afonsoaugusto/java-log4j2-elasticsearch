@@ -11,5 +11,12 @@ public class App {
         logger.debug("Hello, World debug!");
         logger.error("Hello, World error!");
         logger.fatal("Hello, World fatal!");
+        try {
+            throw new Exception("message", new Throwable("message"));
+            // int b = 5 / 0;
+            // throw new Exception("Exception message");
+        } catch (Exception e) {
+            logger.error(e,e);
+        }
     }
 }
