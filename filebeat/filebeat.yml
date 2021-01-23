@@ -9,7 +9,16 @@ filebeat.inputs:
   prefix: "json"
 - type: syslog
   protocol.tcp:
-    host: "0.0.0.0:5443"  
+    host: "0.0.0.0:5443"
+  tags: ["json"]
+
+processors:
+  - add_locale:
+      format: abbreviation
+  - drop_fields:
+      fields: ["agent.ephemeral_id", "agent.hostname", "agent.id", "agent.type", "agent.version", "ecs.version", "input.type", "log.offset", "version"]
+
+
 
 # logging.level: error
 logging.level: ${FILEBEAT_LOG_LEVEL}
@@ -17,5 +26,5 @@ logging.level: ${FILEBEAT_LOG_LEVEL}
 
 output.redis:
   hosts: ${REDIS_HOST}
-  key: "logs-metabase"
+  key: "logs-api"
   db: 0

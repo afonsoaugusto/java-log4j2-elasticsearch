@@ -10,7 +10,11 @@
       <Property name="X-Java-Runtime" value="$${java:runtime}" />
       <JsonLayout properties="true"/>
     </Http>
-    <Syslog name="bsd" host="localhost" port="5443" protocol="TCP"/>
+    <!-- <Syslog name="bsd" host="localhost" port="5443" protocol="TCP"/> -->
+    <Syslog name="bsd" format="bsd" host="localhost" port="5443"
+    protocol="TCP" appName="App" includeMDC="true" mdcId="mdc"
+    facility="LOCAL0" enterpriseNumber="18060" newLine="true"
+    messageId="LogTest" id="App"/>
 
     <!-- This file appender is provided as an example -->
     <!--

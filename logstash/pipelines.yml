@@ -4,5 +4,5 @@
 - pipeline.id: logstash
   path.config: "/usr/share/logstash/pipeline/logstash.conf"
 
-- pipeline.id: redis-1
-  path.config: "/usr/share/logstash/pipeline/redis-1.conf"  
+- pipeline.id: api
+  path.config: "/usr/share/logstash/pipeline/api.conf"
