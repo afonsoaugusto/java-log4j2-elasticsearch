@@ -46,3 +46,26 @@ curl -X POST \
         "message":"teste"
     }'
 ```
+
+## Kibana
+
+```java
+public static void main(String[] args) {
+        System.out.println("Te");
+        logger.info("Hello, World info!");
+        logger.debug("Hello, World debug!");
+        logger.error("Hello, World error!");
+        logger.fatal("Hello, World fatal!");
+        try {
+            throw new Exception("message", new Throwable("message"));
+            // int b = 5 / 0;
+            // throw new Exception("Exception message");
+        } catch (Exception e) {
+            logger.error(e,e);
+        }
+    }
+```
+
+![kibana](images/kibana-1.png)
+
+![kibana](images/kibana-2.png)
